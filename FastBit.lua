@@ -1,6 +1,4 @@
 --> Variables <--
-colorSwatch = Color{ r = 0, g = 0, b = 0 }
-
 rStep = 0.0000000000
 
 gStep = 0.0000000000
@@ -59,13 +57,18 @@ actPal = actSpr.palettes[ 1 ]
 
 
 
---> Create main dialog <--
+		--------------------
+-------> Create main dialog <-------
+		--------------------
 local dlgMain = Dialog{ title = "FastBit - Setup" }
 
 dlgMain:label{ text = "Select channel color depths" }
 
 	:newrow()
 
+
+
+--> RED depth slider <--
 	:slider{
 
 		id = "rDepth",
@@ -82,6 +85,9 @@ dlgMain:label{ text = "Select channel color depths" }
 
 	:newrow()
 
+
+
+--> GREEN depth slider <--
 	:slider{
 
 		id = "gDepth",
@@ -98,6 +104,9 @@ dlgMain:label{ text = "Select channel color depths" }
 
 	:newrow()
 
+
+
+--> BLUE depth slider <--
 	:slider{
 
 		id = "bDepth",
@@ -528,6 +537,10 @@ dlgRGB:label{ text = "                     " }
 
 	:newrow()
 
+
+		--------------
+-------> Color swatch <-------
+		--------------
 	:shades{
 
 		id = "swatch",
@@ -560,6 +573,11 @@ dlgRGB:label{ text = "                     " }
 
 	:newrow()
 
+
+
+		----------------------
+-------> Color manage buttons <-------
+		----------------------
 	:button{
 
 		text = "Get FG Color",
@@ -645,14 +663,17 @@ dlgRGB:label{ text = "                     " }
 --'---------------'--
 
 
-
---> Get fg/bg colors <--
+		------------------
+-------> Get fg/bg colors <-------
+		------------------
 function getColors( inCol )
 
 	dataRGB = dlgRGB.data
 
 
-
+		----------------
+-------> RED slider set <-------
+		----------------
 	if dataMain.rDepth == 8 then
 
 		dataRGB.r8 = inCol.red
@@ -693,6 +714,9 @@ function getColors( inCol )
 
 
 
+		------------------
+-------> GREEN slider set <-------
+		------------------
 	if dataMain.gDepth == 8 then
 
 		dataRGB.g8 = inCol.green
@@ -733,6 +757,9 @@ function getColors( inCol )
 
 
 
+		-----------------
+-------> BLUE slider set <-------
+		-----------------
 	if dataMain.bDepth == 8 then
 
 		dataRGB.b8 = inCol.blue
@@ -773,6 +800,7 @@ function getColors( inCol )
 
 
 
+--> Set swatch color <--
 	dataRGB.swatch = { Color{ r = math.ceil( ( dataRGB.r0 + dataRGB.r1 + dataRGB.r2 + dataRGB.r3 + dataRGB.r4 + dataRGB.r5 + dataRGB.r6 + dataRGB.r7 + dataRGB.r8 ) * rStep ), g = math.ceil( ( dataRGB.g0 + dataRGB.g1 + dataRGB.g2 + dataRGB.g3 + dataRGB.g4 + dataRGB.g5 + dataRGB.g6 + dataRGB.g7 + dataRGB.g8 ) * gStep ), b =  math.ceil( ( dataRGB.b0 + dataRGB.b1 + dataRGB.b2 + dataRGB.b3 + dataRGB.b4 + dataRGB.b5 + dataRGB.b6 + dataRGB.b7 + dataRGB.b8 ) * bStep ) } }
 
 	dlgRGB.data = dataRGB
@@ -780,8 +808,9 @@ function getColors( inCol )
 end
 
 
-
---> Accept user input <--
+		-------------------
+-------> Accept user input <-------
+		-------------------
 function mainOK()
 
 	dataMain = dlgMain.data

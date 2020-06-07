@@ -84,15 +84,7 @@ function setColors( thisDlg )
 
 		if lockState == 0 then
 
-			for i = 0, #actPal - 1, 1 do
-
-				if( actPal:getColor( i ).red == app.fgColor.red and actPal:getColor( i ).green == app.fgColor.green and actPal:getColor( i ).blue == app.fgColor.blue ) then
-
-					actPal:setColor( i, Color{ r = math.ceil( ( dlgData.r0 + dlgData.r1 + dlgData.r2 + dlgData.r3 + dlgData.r4 + dlgData.r5 + dlgData.r6 + dlgData.r7 + dlgData.r8 ) * rStep ), g = math.ceil( ( dlgData.g0 + dlgData.g1 + dlgData.g2 + dlgData.g3 + dlgData.g4 + dlgData.g5 + dlgData.g6 + dlgData.g7 + dlgData.g8 ) * gStep ), b =  math.ceil( ( dlgData.b0 + dlgData.b1 + dlgData.b2 + dlgData.b3 + dlgData.b4 + dlgData.b5 + dlgData.b6 + dlgData.b7 + dlgData.b8 ) * bStep ) } )
-
-				end
-
-			end
+			actPal:setColor( app.fgColor.index, Color{ r = math.ceil( ( dlgData.r0 + dlgData.r1 + dlgData.r2 + dlgData.r3 + dlgData.r4 + dlgData.r5 + dlgData.r6 + dlgData.r7 + dlgData.r8 ) * rStep ), g = math.ceil( ( dlgData.g0 + dlgData.g1 + dlgData.g2 + dlgData.g3 + dlgData.g4 + dlgData.g5 + dlgData.g6 + dlgData.g7 + dlgData.g8 ) * gStep ), b =  math.ceil( ( dlgData.b0 + dlgData.b1 + dlgData.b2 + dlgData.b3 + dlgData.b4 + dlgData.b5 + dlgData.b6 + dlgData.b7 + dlgData.b8 ) * bStep ) } )
 
 		end
 
@@ -102,15 +94,7 @@ function setColors( thisDlg )
 
 		if lockState == 0 then
 
-			for i = 0, #actPal - 1, 1 do
-
-				if( actPal:getColor( i ).red == app.bgColor.red and actPal:getColor( i ).green == app.bgColor.green and actPal:getColor( i ).blue == app.bgColor.blue ) then
-
-					actPal:setColor( i, Color{ r = math.ceil( ( dlgData.r0 + dlgData.r1 + dlgData.r2 + dlgData.r3 + dlgData.r4 + dlgData.r5 + dlgData.r6 + dlgData.r7 + dlgData.r8 ) * rStep ), g = math.ceil( ( dlgData.g0 + dlgData.g1 + dlgData.g2 + dlgData.g3 + dlgData.g4 + dlgData.g5 + dlgData.g6 + dlgData.g7 + dlgData.g8 ) * gStep ), b =  math.ceil( ( dlgData.b0 + dlgData.b1 + dlgData.b2 + dlgData.b3 + dlgData.b4 + dlgData.b5 + dlgData.b6 + dlgData.b7 + dlgData.b8 ) * bStep ) } )
-
-				end
-
-			end
+			actPal:setColor( app.bgColor.index, Color{ r = math.ceil( ( dlgData.r0 + dlgData.r1 + dlgData.r2 + dlgData.r3 + dlgData.r4 + dlgData.r5 + dlgData.r6 + dlgData.r7 + dlgData.r8 ) * rStep ), g = math.ceil( ( dlgData.g0 + dlgData.g1 + dlgData.g2 + dlgData.g3 + dlgData.g4 + dlgData.g5 + dlgData.g6 + dlgData.g7 + dlgData.g8 ) * gStep ), b =  math.ceil( ( dlgData.b0 + dlgData.b1 + dlgData.b2 + dlgData.b3 + dlgData.b4 + dlgData.b5 + dlgData.b6 + dlgData.b7 + dlgData.b8 ) * bStep ) } )
 
 		end
 

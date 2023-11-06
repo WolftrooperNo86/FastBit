@@ -653,15 +653,15 @@ function mainOK( thisDlg, thatDlg )
 
 	elseif thisDlg.data.rDepth == 7 then
 
-		rStep = 255 / 127
+		rStep = 254 / 127
 
 	elseif thisDlg.data.rDepth == 6 then
 
-		rStep = 255 / 63
+		rStep = 252 / 63
 
 	elseif thisDlg.data.rDepth == 5 then
 
-		rStep = 255 / 31
+		rStep = 248 / 31
 
 	elseif thisDlg.data.rDepth == 4 then
 
@@ -669,7 +669,7 @@ function mainOK( thisDlg, thatDlg )
 
 	elseif thisDlg.data.rDepth == 3 then
 
-		rStep = 255 / 7
+		rStep = 252 / 7
 
 	elseif thisDlg.data.rDepth == 2 then
 
@@ -694,15 +694,15 @@ function mainOK( thisDlg, thatDlg )
 
 	elseif thisDlg.data.gDepth == 7 then
 
-		gStep = 255 / 127
+		gStep = 254 / 127
 
 	elseif thisDlg.data.gDepth == 6 then
 
-		gStep = 255 / 63
+		gStep = 252 / 63
 
 	elseif thisDlg.data.gDepth == 5 then
 
-		gStep = 255 / 31
+		gStep = 248 / 31
 
 	elseif thisDlg.data.gDepth == 4 then
 
@@ -710,7 +710,7 @@ function mainOK( thisDlg, thatDlg )
 
 	elseif thisDlg.data.gDepth == 3 then
 
-		gStep = 255 / 7
+		gStep = 252 / 7
 
 	elseif thisDlg.data.gDepth == 2 then
 
@@ -735,15 +735,15 @@ function mainOK( thisDlg, thatDlg )
 
 	elseif thisDlg.data.bDepth == 7 then
 
-		bStep = 255 / 127
+		bStep = 254 / 127
 
 	elseif thisDlg.data.bDepth == 6 then
 
-		bStep = 255 / 63
+		bStep = 252 / 63
 
 	elseif thisDlg.data.bDepth == 5 then
 
-		bStep = 255 / 31
+		bStep = 248 / 31
 
 	elseif thisDlg.data.bDepth == 4 then
 
@@ -751,7 +751,7 @@ function mainOK( thisDlg, thatDlg )
 
 	elseif thisDlg.data.bDepth == 3 then
 
-		bStep = 255 / 7
+		bStep = 252 / 7
 
 	elseif thisDlg.data.bDepth == 2 then
 
